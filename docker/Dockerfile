@@ -1,4 +1,4 @@
-FROM alpine:3.14.2
+FROM alpine:3.14
 
 LABEL maintainer="david <367013672@qq.com>" version="2.0"
 
@@ -74,7 +74,7 @@ RUN set -ex \
         php7-zip \
         php7-zlib \
         php7-xml \
-        && git clone https://github.com/sjtuross/IYUUPlus.git /IYUU \
+        && git clone --depth=1 https://github.com/sjtuross/IYUUPlus.git /IYUU \
         && git config --global pull.ff only \
         && apk del --purge *-dev \
         # install latest composer
