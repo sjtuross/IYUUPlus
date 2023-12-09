@@ -400,6 +400,7 @@ class qBittorrent extends AbstractClient
         }
         $extra_options['urls'] = $torrent_url;
         $extra_options['skip_checking'] = 'true';    //跳校验
+        $extra_options['tags'] = 'IYUU';
         // 关键 上传文件流 multipart/form-data【严格按照api文档编写】
         $post_data = $this->buildData($extra_options);
         #p($post_data);
@@ -423,6 +424,7 @@ class qBittorrent extends AbstractClient
         }
         $extra_options['torrents'] = $torrent_metainfo;
         $extra_options['skip_checking'] = 'true';    //跳校验
+        $extra_options['tags'] = 'IYUU';
         // 关键 上传文件流 multipart/form-data【严格按照api文档编写】
         $post_data = $this->buildTorrent($extra_options);
         // 设置请求头
